@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: prototype
+  datasource:
+    platform: postgresql
+    url: jdbc:postgresql://localhost:5432/demo
+    username: kvms_owner
+    password: kvms
+    driverClassName: org.postgresql.Driver
+  jpa:
+    database: POSTGRESQL
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+    generate-ddl: true
+    hibernate.ddl-auto: create-drop
+    show-sql: true
+server:
+    port: 8080
+    context-path: /prototype
+aws:
+  access-key-id: AKIAIJ3JAIGPNNOZUZPQ
+  secret-key: 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
+  s3:
+    bucket: aralco-demo
+
+#spring.http.multipart.max-file-size=128KB
+#spring.http.multipart.max-request-size=128KB
