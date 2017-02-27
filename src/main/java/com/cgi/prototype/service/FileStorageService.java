@@ -6,9 +6,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
-/**
- * @author aralco
- */
 public interface FileStorageService {
     void saveFile(MultipartFile file, String key);
     List<S3ObjectSummary> listFiles();

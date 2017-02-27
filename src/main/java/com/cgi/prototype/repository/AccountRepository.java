@@ -1,7 +1,7 @@
 package com.cgi.prototype.repository;
 
-/**
- * @author aralco
- */
-public class AccountRepository {
+import com.cgi.prototype.domain.Account;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface AccountRepository extends JpaRepository<Account, Long> {
 }

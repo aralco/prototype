@@ -17,9 +17,6 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.IOException;
 import java.util.List;
 
-/**
- * @author aralco
- */
 @Service
 public class AwsS3FileStorageService implements FileStorageService {
 
@@ -50,20 +47,6 @@ public class AwsS3FileStorageService implements FileStorageService {
             e.printStackTrace();
         }
     }
-
-//    @Override
-//    public void saveFile(final MultipartFile file, String key) {
-//        try {
-//            amazonS3.putObject(
-//                            awsS3Properties.getBucket(),
-//                            (key ==null)?file.getOriginalFilename(): key,
-//                            file.getInputStream(),
-//                            null);
-//            amazonS3.setObjectAcl(awsS3Properties.getBucket(), (key ==null)?file.getOriginalFilename(): key, CannedAccessControlList.PublicRead);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
 
     @Override
     public List<S3ObjectSummary> listFiles() {

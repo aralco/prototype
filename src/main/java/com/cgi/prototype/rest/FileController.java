@@ -15,9 +15,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
-/**
- * @author aralco
- */
 @Api
 @RestController
 @RequestMapping("/files")
@@ -42,7 +39,7 @@ public class FileController {
     }
 
     @GetMapping("/{key:.+}")
-    public ResponseEntity<Resource> downloadDocument(
+    public ResponseEntity<Resource> downloadFile(
             @PathVariable(name = "key") String key)  {
         Resource resource = fileStorageService.findFile(key);
         return ResponseEntity
