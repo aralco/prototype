@@ -1,12 +1,15 @@
 package com.cgi.prototype.service;
 
-import com.cgi.prototype.repository.UserRepository;
+import com.cgi.prototype.repository.PermissionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+/**
+ * @author aralco
+ */
 @Service
-public class UserService {
+public class PermissionService {
 
     @Autowired
-    private UserRepository userRepository;
+    private PermissionRepository permissionRepository;
 }

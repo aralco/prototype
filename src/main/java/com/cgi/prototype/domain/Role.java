@@ -17,6 +17,7 @@ import java.util.Set;
 @DynamicInsert(true)
 @DynamicUpdate(true)
 @Table(name = "roles")
+@EntityListeners(EntityStatusListener.class)
 public class Role implements Serializable, HasResourceStatus {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

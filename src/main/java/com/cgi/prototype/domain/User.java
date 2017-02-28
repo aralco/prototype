@@ -1,5 +1,6 @@
 package com.cgi.prototype.domain;
 
+import com.cgi.prototype.rest.model.TimestampEntityListener;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.Fetch;
@@ -20,6 +21,7 @@ import java.util.Set;
 @DynamicUpdate(true)
 @Table(name = "users")
 @Cacheable(true)
+@EntityListeners({TimestampEntityListener.class, EntityStatusListener.class})
 public class User implements Serializable, EntityWithAuditSupportColumns, HasResourceStatus {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
